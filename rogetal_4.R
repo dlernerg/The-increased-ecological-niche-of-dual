@@ -1,6 +1,6 @@
 # load climate -----------------------------------------------------------------
-load("C:/Users/davidle.WISMAIN/Box/lab folder/myco ido/meansBioClim2.RData")
-load("C:/Users/davidle.WISMAIN/Box/lab folder/myco ido/P_olsen_df.RData")
+load("meansBioClim2.RData")
+load("P_olsen_df.RData")
 
 
 
@@ -9,7 +9,7 @@ load("C:/Users/davidle.WISMAIN/Box/lab folder/myco ido/P_olsen_df.RData")
 library(raster)
 sf_use_s2(F)
 
-load("C:/Users/davidle.WISMAIN/Box/lab folder/hotspots/paper/raw datat/4. quadrant freq/global.inland.RData")
+load("global.inland.RData")
 
 cent <- global.inland$cent %>%
   st_as_sf()
