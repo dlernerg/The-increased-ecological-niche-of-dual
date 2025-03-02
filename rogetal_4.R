@@ -1,9 +1,15 @@
+# load climate -----------------------------------------------------------------
+load("C:/Users/davidle.WISMAIN/Box/lab folder/myco ido/meansBioClim2.RData")
+load("C:/Users/davidle.WISMAIN/Box/lab folder/myco ido/P_olsen_df.RData")
+
+
+
 # environmental niche (Figure 3) ------------------------------------------------------------
 
 library(raster)
 sf_use_s2(F)
 
-load("global.inland.RData")
+load("C:/Users/davidle.WISMAIN/Box/lab folder/hotspots/paper/raw datat/4. quadrant freq/global.inland.RData")
 
 cent <- global.inland$cent %>%
   st_as_sf()
@@ -65,7 +71,7 @@ clim_spec_AM$group <- "AM"
 clim_spec_all <- rbind(clim_spec_dual,clim_spec_AM,clim_spec_EM)
 clim_spec_f <- clim_spec_all[which(clim_spec_all$genus %in% rownames(genus_matrix)),]
 
-clim_spec_f <- clim_spec_f[complete.cases(clim_spec_f),]
+clim_spec_f <- clim_spec_f[complete.cases(clim_spec_f),-22]
 
 vars_choose <- paste0("V",c(1,2,3,7,12,21,23,24,25))
 
@@ -135,6 +141,22 @@ TukeyHSD(a, "group")
 
 clim2plot <- rbind(clim_genus_range,clim_genus_upper_quartile,clim_genus_mean)
 clim2plot$test <- rep(c("range","lower_quartile","mean"), each = nrow(clim_genus_range))
+
+clim_plot <- melt(clim_spec_mean)
+library(ggpubr)
+ggplot(clim_plot[which(clim_plot$variable!="distinct_groups"),], aes(x = group, y = value, group = group, fill = group)) + 
+  geom_boxplot() + 
+  facet_wrap(~ variable, scales = "free_y") + 
+  stat_compare_means(
+    aes(label = ..p.signif..), 
+    method = "t.test", 
+    comparisons = list(c("AM", "EM"), c("AM", "dual"), c("dual", "EM")),
+    symnum.args = list(
+      cutpoints = c(0, 0.001, 0.01, 0.05),  # Define p-value thresholds
+      symbols = c("***", "**", "*")     # Corresponding symbols
+    )
+  ) + 
+  theme_minimal()
 
 # Blomberg K  --------------------------------------------
 
