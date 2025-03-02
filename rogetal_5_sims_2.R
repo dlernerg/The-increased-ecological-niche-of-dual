@@ -1,9 +1,8 @@
-load("C:/Users/David Lerner/Box/lab folder/hotspots/maps raw data/biomes/names_biome.RData")
-load("C:/Users/David Lerner/Box/lab folder/hotspots/maps raw data/biomes/wwf_simple.b.RData")
-load("C:/Users/David Lerner/Box/lab folder/hotspots/paper/raw datat/2. polygon formation/GBIFpolygon_groups.RData")
+load("names_biome.RData")
+load("wwf_simple.b.RData")
+load("GBIFpolygon_groups.RData")
 
 load(treenew) 
-load(clusglobesum.RData)
 
 sf_use_s2(F)
 
