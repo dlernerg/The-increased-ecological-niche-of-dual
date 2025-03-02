@@ -18,6 +18,9 @@ This repository contains the R scripts and necessary data used for the analysis 
 4. **rogetal_4.R**:  
    This script performs the final analysis of the paper (Figure 3) - an analysis on the niche space. It combines the data generated in rogetal_1.R with environmental data from WorldClim data (Hijmans et al. 2015) and Olsen P data (McDowell et al. 2023).
 
+5. **rogetal_5_sims2**
+   This script performs the simulations of the paper. One needs to run rogetal_3.R before running the simulations, and load the confirmed and unconfirmed model summary dataframes as "model_unconfirmed" and "model_confirmed".
+     
 ### Data Files
 
 1. **confirmed.xlsx**:  
