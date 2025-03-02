@@ -1,7 +1,7 @@
 # biomes overlap (Figure 2) ------------------------------------------------------------------
 sf_use_s2(FALSE)
 
-load("C:/Users/David Lerner/Box/lab folder/hotspots/maps raw data/biomes/wwf_simple.b.RData")
+load("wwf_simple.b.RData")
 clus.globe <- wwf_simpl.b %>% 
   rename(cells = 1) %>%
   mutate(cluster = cells)
@@ -95,7 +95,7 @@ biomes_all_wide <- biomes_all %>%
 
 #####
 library(phylolm)
-load("C:/Users/David Lerner/Box/lab folder/hotspots/maps raw data/biomes/names_biome.RData")
+load("names_biome.RData")
 
 biomes_all_wide <- as.data.frame(biomes_all_wide)
 biomes_all_wide$genus_id <- as.numeric(rownames(biomes_all_wide))
