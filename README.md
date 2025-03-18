@@ -5,7 +5,7 @@
 
 ## Version
 
-- **Current Version**: publication v2
+- **Current Version**: v2.0
 - **Release Date**: March 18, 2025
 
 ## Description
