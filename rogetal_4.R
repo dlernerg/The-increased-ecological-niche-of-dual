@@ -1,10 +1,11 @@
+#this script is dependent on rogetal_1.R
+
 # load climate -----------------------------------------------------------------
 load("meansBioClim2.RData")
 load("P_olsen_df.RData")
 
 
-
-# environmental niche (Figure 3) ------------------------------------------------------------
+# environmental niche ------------------------------------------------------------
 
 library(raster)
 sf_use_s2(F)
@@ -98,7 +99,6 @@ clim_spec_range <- clim_spec_f %>%
   summarise(across(vars_choose, ~ max(.x, na.rm = TRUE) - min(.x, na.rm = TRUE)),
             distinct_groups = n_distinct(group),
             group = first(group)) %>%
-  # Check if there are multiple distinct groups and set to 'dual' if so
   mutate(group = if_else(distinct_groups > 1, "dual", group)) 
 
 
