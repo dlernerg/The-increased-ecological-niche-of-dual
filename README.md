@@ -16,6 +16,21 @@ This repository contains the R scripts and necessary data used for the analysis 
 
 This project was developed using R version 4.4.2.
 
+## R Package Versions
+
+This project uses the following R packages and their respective versions:
+
+- `ggplot2`: 3.3.5
+- `phytools`: 2.4.4
+- `ape`: 5.8.1
+- `sf`: 1.0.19
+- `raster`: 3.6.31
+- `ggtree`: 3.14.0
+- `ggnewscale`: 0.5.1
+- `ggstar`: 1.0.4
+- `caper`: 1.0.3
+- `phylolm`: 2.5.6
+
 ### Scripts
 
 1. **rogetal_1.R**:  
