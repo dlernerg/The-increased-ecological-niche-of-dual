@@ -2,6 +2,7 @@ load("names_biome.RData")
 load("wwf_simple.b.RData")
 load("GBIFpolygon_groups.RData")
 
+#refer to tree.new from Rogetal_1.R
 load(treenew) 
 
 sf_use_s2(F)
