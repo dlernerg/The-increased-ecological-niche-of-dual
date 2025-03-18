@@ -86,10 +86,7 @@ boot_fun <- function(clus.globe,GBIF.all){
   
   
   comp_data$data$group <- as.factor(comp_data$data$group)
-  
-  
-  # poisson, ----------------------------------------------------------------
-  
+ 
   
   comp_data_sum <- comp_data$data %>%
     rowwise() %>%
@@ -142,7 +139,7 @@ boot_fun <- function(clus.globe,GBIF.all){
 }
 
 
-# unconfirmed ratio  ------------------------------------------------------
+# this code runs a simulation given the ratio of EM and AM that are assigned dual given the unconfirmed dataset from Teste et al., 2020 
 
 boot_run <- list()
 
@@ -166,7 +163,7 @@ for (i in 1:100) {
 }
 
 
-# random ratio  ------------------------------------------------------------
+# this code assigns dual species given the existing ratio of AM and EM species
 
 boot_run <- list()
 
