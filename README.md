@@ -12,10 +12,16 @@
 
 This repository contains the R scripts and necessary data used for the analysis in the paper **The increased ecological niche of dual mycorrhizal tree species** by Rog et al. These scripts are designed to reproduce the analyses described in the paper.
 
+## R Version
+
+This project was developed using R version 4.4.2.
+
 ### Scripts
 
 1. **rogetal_1.R**:  
    This script performs the initial data cleaning and preprocessing. It reads in the `confirmed.xlsx`, `AM_confirmed.xlsx`, and `EM_confirmed.xlsx` files, combines the confirmed tree species with a phylogenetic tree from Sanchez Martinez et al., (2020) and outputs cleaned data that will be used in subsequent analysis.
+
+All the following scripts are dependent on rogetal_1.R
 
 2. **rogetal_2.R**:  
    This script conducts the phylogenetic analyses observed in figure 1 (phylogenetic map plotting, MPD and delta statistics), using the preprocessed data from `rogetal_1.R` file. 
