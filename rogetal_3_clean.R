@@ -1,4 +1,5 @@
-# biomes overlap (Figure 2) ------------------------------------------------------------------
+#this script is dependent on rogetal_1.R
+
 sf_use_s2(FALSE)
 
 load("wwf_simple.b.RData")
