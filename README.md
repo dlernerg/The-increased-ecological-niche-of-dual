@@ -41,4 +41,18 @@ This repository contains the R scripts and necessary data used for the analysis 
 6. **names_biomes.RData**:  
    WWF Biome names for the polygons from wwf_simple.b.RData
 
+7. **GBIFpolygon_groups.RData**
+   These are the polygons obtained from Lerner et al., 2023 and can be obtained from https://github.com/dlernerg/Global-Range-edges/releases/tag/publication
+
+8. **SanchezM (2020).tre**
+   The phylogenetic tree obtained from Sanchez Martinez et al., 2020
+
+9. **code_delta.R**
+    Code to run delta statistic obtained from Borges et al., 2019
+
+10. **meansBioClim2.RData**
+    Average BioClim variables (Hijmans et al., 2005) for each of the polygons (grid cells) obtained from global.indland.RData
+    
+11. **P_olsen_df.RData**
+    Average olsen phosporous measurements (McDowell et al., 2023) for each of the polygons (grid cells) obtained from global.inland.RData 
 
