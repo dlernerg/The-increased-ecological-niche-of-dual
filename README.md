@@ -1,5 +1,13 @@
 # Scripts and Data for "The-increased-ecological-niche-of-dual mycorrhizal tree species"
 
+- **Author**: David Lerner
+- **Email**: dlernerg@gmail.com
+
+## Version
+
+- **Current Version**: v1.0.0
+- **Release Date**: March 18, 2025
+
 ## Description
 
 This repository contains the R scripts and necessary data used for the analysis in the paper **The increased ecological niche of dual mycorrhizal tree species** by Rog et al. These scripts are designed to reproduce the analyses described in the paper.
