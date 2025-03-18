@@ -1,3 +1,5 @@
+#this script is dependent on rogetal_1.R and rogetal_3_clean.R
+
 load("names_biome.RData")
 load("wwf_simple.b.RData")
 load("GBIFpolygon_groups.RData")
