@@ -1,3 +1,5 @@
+#this script is dependent on rogetal_1.R
+
 library(ggtree)
 library(ggnewscale)
 library(ggtreeExtra)
