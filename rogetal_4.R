@@ -1,8 +1,8 @@
 #this script is dependent on rogetal_1.R
 
 # load climate -----------------------------------------------------------------
-load("meansBioClim2.RData")
-load("P_olsen_df.RData")
+read.csv("meansBioClim2.csv")
+read.csv("P_olsen_df.csv")
 
 
 # environmental niche ------------------------------------------------------------
@@ -10,7 +10,7 @@ load("P_olsen_df.RData")
 library(raster)
 sf_use_s2(F)
 
-load("global.inland.RData")
+st_read("global.inland.geojson")
 
 cent <- global.inland$cent %>%
   st_as_sf()
