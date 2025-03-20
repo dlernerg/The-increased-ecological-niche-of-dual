@@ -52,36 +52,37 @@ All the following scripts are dependent on rogetal_1.R
      
 ### Data Files
 
-1. **confirmed.xlsx**:  
-   This Excel file contains confirmed dual mycorrhizal genera from Teste et al., 2020.
+1. **confirmed.csv**:  
+   List of confirmed dual mycorrhizal genera from Teste et al., 2020.
 
-2. **AM_confirmed.xlsx**:  
-   This Excel file contains confirmed AM mycorrhizal genera from Soudzilovskaia et al., 2020.
+2. **AM_confirmed.csv**:  
+   List of confirmed AM mycorrhizal genera from Soudzilovskaia et al., 2020.
 
-3. **EM_confirmed.xlsx**:  
-   This Excel file contains confirmed EM mycorrhizal genera from Soudzilovskaia et al., 2020.
+3. **EM_confirmed.csv**:  
+   List of confirmed EM mycorrhizal genera from Soudzilovskaia et al., 2020.
 
-4. **global.inland.RData**:  
-   RData file containing grid cells of the world map using the 'dggridR' package which employs the ISEA Discrete Global Grid System for equal-sized grid projection on a 2-dimensional plane.
+4. **global.inland.geojson**:  
+   A shapefile containing grid cell polygons of the world map, created using the 'dggridR' package, which employs the ISEA Discrete Global Grid System for equal-sized grid projection on a 2-dimensional plane (described in detail in Lerner et al., (2023)).
 
-5. **wwf_simple.b.RData**:  
-   Contains polygons for the wwf biomes, whereby the polygons were smoothened, as described in Lerner et al., 2023.
+5. **wwf_simple.b.csv**:  
+   Contains smoothened polygons for the WWF biomes, as described in Lerner et al., 2023.
 
-6. **names_biomes.RData**:  
-   WWF Biome names for the polygons from wwf_simple.b.RData
+6. **names_biomes.csv**:  
+   Table containing the names of WWF Biome, aligned with the biome polygons in the "wwf_simple.b.geojson" shapefile. 
 
-7. **GBIFpolygon_groups.RData**
-   These are the polygons obtained from Lerner et al., 2023 and can be obtained from https://github.com/dlernerg/Global-Range-edges/releases/tag/publication
+7. **GBIFpolygon_groups.geojson**
+   This shapefile containing the species distributions data from Lerner et al., 2023. Each record represents a species' population, with the following columns: 1. unique identifier index, 2. species ID, 3. distribution polygons.  
 
 8. **SanchezM (2020).tre**
    The phylogenetic tree obtained from Sanchez Martinez et al., 2020
 
 9. **code_delta.R**
-    Code to run delta statistic obtained from Borges et al., 2019
+    R code to run delta statistic obtained from Borges et al., 2019
 
-10. **meansBioClim2.RData**
-    Average BioClim variables (Hijmans et al., 2005) for each of the polygons (grid cells) obtained from global.indland.RData
+10. **meansBioClim2.csv**
+    This file contains the average BioClim variables (Hijmans et al., 2005) for each world grid cell. Each row corresponds to a specific grid cell from the global.inland.geojson shapefile, with the 19 columns representing the mean values of the BioClim variables for that cell.
+
     
-11. **P_olsen_df.RData**
-    Average olsen phosporous measurements (McDowell et al., 2023) for each of the polygons (grid cells) obtained from global.inland.RData 
+12. **P_olsen_df.csv**
+    A list of average olsen phosporous measurements (McDowell et al., 2023). The order of the values correspond to the order of the world grid cells (obtained from global.inland.geojson) 
 
