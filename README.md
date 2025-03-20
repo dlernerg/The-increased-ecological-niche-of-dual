@@ -34,7 +34,7 @@ This project uses the following R packages and their respective versions:
 ### Scripts
 
 1. **rogetal_1.R**:  
-   This script performs the initial data cleaning and preprocessing. It reads in the `confirmed.xlsx`, `AM_confirmed.xlsx`, and `EM_confirmed.xlsx` files, combines the confirmed tree species with a phylogenetic tree from Sanchez Martinez et al., (2020) and outputs cleaned data that will be used in subsequent analysis.
+   This script performs the initial data cleaning and preprocessing. It reads in the `confirmed.csv`, `AM_confirmed.csv`, and `EM_confirmed.csv` files, combines the confirmed tree species with a phylogenetic tree from Sanchez Martinez et al., (2020) and outputs cleaned data that will be used in subsequent analysis.
 
 All the following scripts are dependent on rogetal_1.R
 
@@ -42,13 +42,13 @@ All the following scripts are dependent on rogetal_1.R
    This script conducts the phylogenetic analyses observed in figure 1 (phylogenetic map plotting, MPD and delta statistics), using the preprocessed data from `rogetal_1.R` file. 
 
 3. **rogetal_3.R**:  
-   This script runs the biome overlap data observed in Figure 2. It uses the cleaned data and `names_biome.RData` and `wwf_simple.b.RData` to generate binomial and poisson models of the occupided space for each of the mycorrhizal associating tree species groups.
+   This script runs the biome overlap data observed in Figure 2. It uses the cleaned data and `names_biome.csv` and `wwf_simple.b.geojson` to generate binomial and poisson models of the occupided space for each of the mycorrhizal associating tree species groups.
 
 4. **rogetal_4.R**:  
    This script performs the final analysis of the paper (Figure 3) - an analysis on the niche space. It combines the data generated in rogetal_1.R with environmental data from WorldClim data (Hijmans et al. 2015) and Olsen P data (McDowell et al. 2023).
 
 5. **rogetal_5_sims2**
-   This script performs the simulations of the paper. One needs to run rogetal_3.R before running the simulations, and load the confirmed and unconfirmed model summary dataframes as "model_unconfirmed" and "model_confirmed".
+   This script performs the simulations of the paper. It uses the ouptut from rogetal_3.R with either the generated confirmed and unconfirmed model summary dataframes "model_confirmed" and "model_unconfirmed", respectively.
      
 ### Data Files
 
@@ -81,8 +81,7 @@ All the following scripts are dependent on rogetal_1.R
 
 10. **meansBioClim2.csv**
     This file contains the average BioClim variables (Hijmans et al., 2005) for each world grid cell. Each row corresponds to a specific grid cell from the global.inland.geojson shapefile, with the 19 columns representing the mean values of the BioClim variables for that cell.
-
     
-12. **P_olsen_df.csv**
+11. **P_olsen_df.csv**
     A list of average olsen phosporous measurements (McDowell et al., 2023). The order of the values correspond to the order of the world grid cells (obtained from global.inland.geojson) 
 
