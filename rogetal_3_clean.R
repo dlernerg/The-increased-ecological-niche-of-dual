@@ -96,7 +96,7 @@ biomes_all_wide <- biomes_all %>%
 
 #####
 library(phylolm)
-load("names_biome.RData")
+read.csv("names_biome.csv")
 
 biomes_all_wide <- as.data.frame(biomes_all_wide)
 biomes_all_wide$genus_id <- as.numeric(rownames(biomes_all_wide))
