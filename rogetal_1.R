@@ -7,8 +7,9 @@ library(phytools)
 library(ape)
 library(stringr)
 
-GBIFpolygon_groups <- load("GBIFpolygon_groups.RData")
-confirmed.dual <- read_excel("confirmed.xlsx")
+
+GBIFpolygon_groups <- st_read("GBIFpolygon_groups.geojson")
+confirmed.dual <- read_csv("confirmed.cvs")
 
 colnames(confirmed.dual) <- confirmed.dual[2,]
 confirmed.dual <- confirmed.dual[3:nrow(confirmed.dual),]
@@ -24,11 +25,11 @@ GBIFpolygon_groups$genus <- GBIFpolygon_groups$specie %>%
 
 genus.dual <- confirmed.dual$Genus
 
-confirmed.EM <- read_excel("EM_confirmed.xlsx")
+confirmed.EM <- read_csv("EM_confirmed.csv")
 
 genus.EM <- confirmed.EM$Genus
 
-confirmed.AM <- read_excel("AM_confirmed.xlsx")
+confirmed.AM <- read_csv("AM_confirmed.csv")
 
 genus.AM <- confirmed.AM$Genus
 
