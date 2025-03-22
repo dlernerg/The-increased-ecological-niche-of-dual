@@ -10,7 +10,7 @@ read.csv("P_olsen_df.csv")
 library(raster)
 sf_use_s2(F)
 
-st_read("global.inland.geojson")
+global.inland <- st_read("global.inland.geojson")
 
 cent <- global.inland$cent %>%
   st_as_sf()
