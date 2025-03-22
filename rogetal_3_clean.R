@@ -2,7 +2,7 @@
 
 sf_use_s2(FALSE)
 
-st_read("wwf_simple.b.geojson")
+wwf_simple.b <- st_read("wwf_simple.b.geojson")
 clus.globe <- wwf_simpl.b %>% 
   rename(cells = 1) %>%
   mutate(cluster = cells)
